@@ -16,7 +16,7 @@ async def start(message: Message):
 
 
 PRICE = {
-    '1': [LabeledPrice(label='Item1', amount=1000000)],
+    '1': [LabeledPrice(label='Item1', amount=100000)],
     '2': [LabeledPrice(label='Item2', amount=2000000)],
     '3': [LabeledPrice(label='Item3', amount=3000000)],
     '4': [LabeledPrice(label='Item4', amount=4000000)],
@@ -31,7 +31,7 @@ async def buy_process(web_app_message):
                            title='Title',
                            description='Title',
                            provider_token=PAYMENTS_TOKEN,
-                           currency='rub',
+                           currency='UZS',
                            need_email=True,
                            need_phone_number=True,
                            prices=PRICE[f'{web_app_message.web_app_data.data}'],
